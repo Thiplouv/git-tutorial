@@ -7,6 +7,8 @@ import random
 def guess_loop():
     # This is the number the user will have to guess , chosen randomly
     # in between 1 and 100
+    name = input("Hello, user ! Would you please enter your name, please ?")
+
     number_to_guess = random.randint (1 , 100)
     print ("I have in mind a number in between 1 and 100 , can you find it ?")
     # Replay the question until the user finds the correct number
@@ -21,7 +23,7 @@ def guess_loop():
                 print ("The number to guess is higher")
             else :
             # The user found the number to guess , let ’s exit
-                print ("You just found the number, it was indeed", guess)
+                print ("Great {:s}, you just found the number, it was indeed {:d}.".format(name, guess))
                 return
         # A ValueError is raised by the int() function if the user inputs something else than a number
         except ValueError as err :
