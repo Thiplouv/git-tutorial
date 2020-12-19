@@ -9,6 +9,8 @@ def guess_loop():
     count = 5
     # Ask to the user his name
     name = input("Hello, user ! Would you please enter your name, please ?\n")
+    if isinstance(name, str) :
+        name = input("That does not seem to be a name. Please redo.\n")
 
     # This is the number the user will have to guess , chosen randomly
     # in between 1 and 100
@@ -35,7 +37,7 @@ def guess_loop():
                 print("Sorry, you have used your 5 tries.")
                 break
         # A ValueError is raised by the int() function if the user inputs something else than a number
-        except ValueError as err :
+        except ValueError :
             print ("Invalid input , please enter an integer")
 
 # Launch the game
