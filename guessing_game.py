@@ -24,7 +24,7 @@ def guess_loop():
                 print ("You just found the number, it was indeed", guess)
                 return
         # A ValueError is raised by the int() function if the user inputs something else than a number
-        except ValueError as err :
+        except ValueError :
             print ("Invalid input , please enter an integer")
 
 # Launch the game
